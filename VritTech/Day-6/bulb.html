@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>BULB</title>
+</head>
+
+<style>
+div{
+    align-self: center;
+    position: fixed;
+
+}    
+
+    
+body{background-color: black;
+     background-image: 
+}
+.btn1{background-color: white;
+        border:none;
+        color: aqua;
+        padding: 15px 32px ;
+        cell: spacing 20px; 
+        text-decoration:none ;
+        border-radius: 8px;
+        display: flex;
+        margin: auto;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 5px;
+}    
+.btn2{
+    border:none;
+        color: aqua;
+        padding: 15px 32px ;
+        cell: spacing 20px; 
+        text-decoration:none ;
+        border-radius: 8px;
+        display: flex;
+        margin: auto;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+       
+}
+script{
+    position: fixed;
+}
+
+
+
+</style>
+<body>
+    <div id="bulb-container"></div>
+
+    <button class="btn1" onclick="onLight()">On</button>
+    <button class="btn2" onclick="offLight()">Off</button>
+
+
+    <script>
+
+       function onLight()
+       {
+              let bulbContainer = document.getElementById('bulb-container');
+              let imageTag= document.createElement('img');
+              imageTag.src="lamp1.PNG";
+              bulbContainer.innerHTML="";
+
+              bulbContainer.appendChild(imageTag);
+
+       }
+       function offLight()
+       {
+    
+        let bulbContainer =document.getElementById('bulb-container');
+              let imageTag= document.createElement('img');
+              imageTag.src="lamp2.PNG";
+              bulbContainer.innerHTML="";
+
+              bulbContainer.appendChild(imageTag);
+
+       }
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>    

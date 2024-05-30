@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Day 18</title>
+    </head>
+    <body>
+        <script>
+
+          /*  var a;
+            var b=a??2;  //Nullish operator ??
+            console.log(b);       */
+            
+             
+            const person = [{name:'John',age:25}, { name: 'Hari' , age: 18}];
+            /*for  (let x in person){
+                console.log(person[x]);
+            }  */
+
+
+            // forEach loop used
+
+            const ff=person.forEach((item) => {
+                console.log(item);
+            });     
+            
+          
+
+            //using map
+            const bb = person.map((item)=>{
+                console.log('bb',item);
+                return item;
+            });
+
+            console.log('bb',bb);
+
+
+
+            //using for of loop
+            const cars = ["BMW", "Volvo", "Mini"];
+
+            
+            for (let x of cars) {
+             console.log('x',x);
+            }
+
+
+
+            //using while loop
+
+            var i=[1,2,3,4,5];
+            var a=0;
+            while (i.length > a) {
+            console.log(i[a]);
+            a++;
+            }
+
+
+
+                //break and continue 
+
+                for(let i=0;i<10;i++)
+                {
+                    if(i===3) {break;}
+                    console.log('break',i);
+                }
+                 
+                
+                for(let i=0;i<10;i++)
+                {
+                    if(i===3) {continue;}
+                    console.log('continue',i);
+                }
+
+
+
+
+                //set methods
+
+                const letters = new Set([1,2,3]);
+
+                console.log(letters.has(5));
+
+                //Map
+
+                const fruits = new Map([
+                ["apples", 500],
+                ["bananas", 300],
+                ["oranges", 200]
+                ]);
+
+                    console.log(fruits)
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

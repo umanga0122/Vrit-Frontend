@@ -1,0 +1,40 @@
+<html>
+    <head>
+        Day-13
+    </head>
+
+    <body>
+
+        <script>
+
+            function login()
+            {
+                fetch('https://dummyjson.com/auth/login', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    
+    username:  document.querySelector('.username').value,
+    password: document.querySelector('.password').value,
+    expiresInMins: 30, // optional, defaults to 60
+  })
+})
+.then( res => {return res.json()})
+.then((data)=> console.log('ddt',data));
+
+
+            }
+
+
+            console.log(JSON.stringify({
+    
+    username: 'kminchelle',
+    password: '0lelplR',
+    expiresInMins: 30, // optional, defaults to 60
+
+
+    
+  }))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <div id="container"></div>
+        <script>
+
+            const productList=[{
+
+                Name  : 'Addidas',
+                imagePath : 'shoe1.jpg',
+                price : 200,
+                size : 'xl',
+                stock : 10,
+                color : ['red','green','blue']
+                
+            },
+            {
+                                
+                            
+
+                name  : 'Addidas',
+                imagePath : './addidas.png',
+                price : 200,
+                size : 'xl',
+                stock : 10,
+                color : ['red','green','blue']
+            },
+            {
+                name  : 'Addidas',
+                imagePath : './addidas.png',
+                price : 200,
+                size : 'xl',
+                stock : 10,
+                color : ['red','green','blue']
+            },
+            
+
+]
+            
+                       
+            productList.map((item)=>{
+                console.log('item',item);
+                let divref = document.getElementById('container');
+                let elem = document.createElement('p')
+                let elem1 = document.createElement('p')
+                let elem2 = document.createElement('p')
+                let elem3 = document.createElement('p')
+                let elem4 = document.createElement('p')
+                let elem5 = document.createElement('p')
+                let card = document.createElement('div')
+
+                elem.textContent=item.name;
+                elem1.textContent=item.size;
+                elem2.textContent=item.color;
+                elem3.textContent=item.imagePath;
+                elem4.textContent=item.stock;
+                elem5.textContent=item.price;
+                
+                card.appendChild(elem);
+                card.appendChild(elem1);
+                card.appendChild(elem2);
+                card.appendChild(elem);
+                card.appendChild(elem1);
+                card.appendChild(elem2);
+                
+
+
+
+                card.style.backgroundColor="Grey";
+                card.style.color="White";
+                                
+                divref.appendChild(card);
+
+                
+                divref.appendChild(elem);
+              
+
+            })
+        
+        
+        
+        </script>
+
+
+
+
+
+        </body>
+</html>

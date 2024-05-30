@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> Day-17</title>
+    </head>
+    <body>
+        
+        <script>
+
+            function* generatorFunction()
+            {
+                let count = 0;
+                while(true)
+                {
+                    yield count++
+            
+                }
+                
+            }
+
+
+            var gF =generatorFunction();
+            
+            console.log(gF.next().value);
+            
+            console.log(gF.next().value);
+            
+            console.log(gF.next().value);
+
+        </script>
+    </body>
+</html>

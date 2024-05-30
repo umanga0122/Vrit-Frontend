@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    font-family: fantasy;
+}
+.main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 100%; 
+    height:  100vh;  
+    align-items:center;
+}
+.Sub
+{
+    width: 280px; 
+    height: 320px;
+    background-color: white; 
+    display:flex; 
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px; 
+    box-shadow: #0afa1eec 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; 
+}
+#button
+{
+    background-color: green; 
+    border: none; 
+    max-width: none;
+    height: 30px; 
+    border-radius: 6px; 
+    color: white;
+    margin-top:15px ;
+    cursor: pointer;
+    transition: 1.5s ease-in-out;
+}
+#button:hover 
+{
+background-color: rgb(94, 180, 94);
+
+}
+.input-field
+{
+    height: 30px;
+}

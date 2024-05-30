@@ -1,0 +1,50 @@
+<html>
+    
+    <head>
+<title>Calculator</title>
+    </head>
+    <body>
+        <input id="num1" onchange="getInputFieldOne()" type ="text"/>
+        <br/>
+        <input id="num2" onchange="getInputFieldOne()" type ="text"/>
+        
+           <script>
+ function getInputFieldOne()
+ {
+ 
+var num1=document.getElementById('num1');
+var num2=document.getElementById('num2');
+console.log("ww",typeof (parseInt(num1.value)),typeof(parseInt(num1.value)));
+const calc = new Calculator();
+console.log(calc.add(parseInt(num1.value), parseInt(num2.value)));
+
+ }
+var num2=document.getElementById('num2');
+console.log(num1.value)
+            class Calculator
+            {
+
+                add(num1, num2)
+                {
+                    return num1+num2;
+                }
+                sub(num1, num2)
+                {
+                    return num1-num2;
+                }
+                mul(num1, num2)
+                {
+                    return num1*num2;
+                }
+                
+            
+            }
+
+
+
+
+        </script>
+        
+    </body>
+    
+</html>

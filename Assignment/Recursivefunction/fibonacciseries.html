@@ -1,0 +1,33 @@
+<html>
+    <head>
+     <title>Fibonacci series</title>
+    </head>
+    <body>
+        <script>
+            //0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 
+
+          
+
+          function fibonacci(num)
+          {
+            if(num<2)
+            {
+                return num;
+            }
+            else{
+                return fibonacci(num-1)+fibonacci(num-2);
+            }
+          }  
+
+          for(let i=0; i<11; i++)
+          {
+            console.log(fibonacci(i));
+          }
+
+
+
+
+
+        </script>
+    </body>
+</html>

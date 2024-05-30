@@ -1,0 +1,87 @@
+<html>
+    
+    <head>
+<title>mosquito</title>
+    </head>
+
+    <style>
+
+      body{
+        
+        background-color: aqua;
+        
+      
+      }  
+      
+    </style>
+    <body>
+      
+       <div id="game-board"></div>
+<p>Your score is:<span id="score">0</span></p>
+        
+        
+           <script>
+            
+            let score=0;
+            var scoreElement = document.getElementById('score');
+         
+            function createBoard()
+            { 
+                
+                
+                var gamearea = document.getElementById('game-board');
+              gamearea.style.width='500px';
+              gamearea.style.height='500px';
+              gamearea.style.background='yellow';
+              
+              
+
+
+            }
+            function moveMosquito()
+            {
+                let top =Math.floor(Math.random()*(500-100));
+                let left =Math.floor(Math.random()*(500-100));
+                var mosquito = document.createElement('img')
+                var audio = document.createElement('audio')
+                var gamearea = document.getElementById('game-board');
+              mosquito.src="mosquito.png";
+              
+              mosquito.style.width='40px';
+              mosquito.style.height='40px'; 
+              mosquito.style.marginTop=`${top}px`
+              mosquito.style.marginLeft=`${left}px` 
+              gamearea.innerHTML=''
+              gamearea.appendChild(mosquito);
+
+              mosquito.addEventListener('click',function(){
+                score++;
+                scoreElement.textContent=score;
+                var audio = new Audio(" gunshot.mp3");
+                audio.play();
+          
+              });
+              
+            
+           
+            }
+            function startGame()
+            {
+                createBoard();
+                moveMosquito();
+
+                setInterval(()=>{
+                    moveMosquito();
+                },2000)
+            
+            }
+            startGame();
+
+
+          
+
+        </script>
+        
+    </body>
+    
+</html>
